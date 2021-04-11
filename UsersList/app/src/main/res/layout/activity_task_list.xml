@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskList">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/users_butt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stateListAnimator="@null"
+                    android:text="powrót do listy Użytkowników"
+                    app:backgroundTint="#DFBA03" />
+
+                <Switch
+                    android:id="@+id/switchTasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E4891A"
+                    android:checked="true"
+                    android:text="Pokaż zadania"
+                    android:textColor="#FFFFFF" />
+
+                <Switch
+                    android:id="@+id/switchPosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E4891A"
+                    android:checked="true"
+                    android:text="Pokaż posty"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/User_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#BF6304"
+                    android:text="user"
+                    android:textColor="#FFFFFF"
+                    android:textSize="32dp" />
+
+                <TextView
+                    android:id="@+id/zadania_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#A821BF"
+                    android:text="Zadania:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/taskList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/posty_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#1334DD"
+                    android:text="Posty:"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/postList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
